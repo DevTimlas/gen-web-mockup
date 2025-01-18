@@ -5,7 +5,7 @@ import traceback
 
 app = Flask(__name__)
 CORS(app)
-client = OpenAI(api_key="sk-proj-s9ljylY37M9tAfEx4NSST3BlbkFJERL4Bc76b6hucJEJJxzi")
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 
 def gen_img(prompt, num_g=1):
